@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
+import logo from "../img/Logo1.png"
 
 export default class TopMenu extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ export default class TopMenu extends React.Component {
     return (
       <Navbar fixed="top" id="navbar" bg="primary" variant="dark">
         <Container>
-          <img className="logo" src="../img/DiseñodeHormigónarmado2-Logo_UIS-401685.png" />
+          <img className="logo" src={logo} />
           <Navbar.Brand href="#home">
             Grupo 14 MisionTic<spam id="usuario-sub-branm"></spam>
           </Navbar.Brand>
