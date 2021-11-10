@@ -10,6 +10,7 @@ var empleadosRouter = require('./routes/empleados.router');
 var usuariosRouter = require('./routes/usuarios.router');
 
 var app = express();
+/*comentario prueba*/
 
 app.use(logger('dev'));
 app.use(express.json());
