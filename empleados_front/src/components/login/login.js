@@ -4,10 +4,10 @@ import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import { APIHOST as host } from "../../app.json";
 import "./login.css";
 import { isNull } from "util";
-import Cookies from "universal-cookie";
-import { calculaExracionSesion } from "../helper/helper";
+// import Cookies from "universal-cookie";
+// import { calculaExracionSesion } from "../helper/helper";
 
-const cookies = new Cookies();
+// const cookies = new Cookies();
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -24,14 +24,15 @@ export default class Login extends React.Component {
         pass: this.state.pass,
       })
       .then((response) => {
-        if (isNull(response.data.token)) {
-          alert("Usuario y/o contraseña invalidos");
-        } else {
-          cookies.set("_s", response.data.token, {
-            path: "/",
-            expires: calculaExracionSesion(),
-          });
-        }
+        console.log(response);
+        // if (isNull(response.data.token)) {
+        //   alert("Usuario y/o contraseña invalidos");
+        // } else {
+          // cookies.set("_s", response.data.token, {
+          //   path: "/",
+          //   expires: calculaExracionSesion(),
+          // });
+        // }
       })
       .catch((err) => {
         console.log(err);
